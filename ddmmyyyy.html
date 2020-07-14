@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <title> 
+        How to get current formatted date dd/mm/yyyy 
+        in Javascript and append it to an input? 
+    </title> 
+</head> 
+  
+<body> 
+    
+      
+    <b> 
+        to get current formatted date dd/mm/yyyy in  
+        Javascript
+    </b> 
+      
+    <p> 
+        Current Date is:  
+        <span class="currDate"></span> 
+    </p> 
+      
+    
+      
+    <script type="text/javascript"> 
+            let currDate = 
+                new Date().toLocaleDateString('en-GB'); 
+                  
+             
+  
+            document.querySelector('.currDate').textContent 
+                    = currDate; 
+                      
+           
+    </script> 
+<input type="button" value="Print" 
+               onclick="window.print()" />
+<button type="button"
+onclick="document.getElementById('display').innerHTML=Date()">Date and Time</button>
+<p id="display"></p>
+</body>
+</html>   

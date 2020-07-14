@@ -1,0 +1,43 @@
+
+<!DOCTYPE html> 
+<html> 
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"> 
+    <title> 
+        print current day and time 
+    </title> 
+</head> 
+  
+<body> 
+<b>Date and time using java script</b><br>
+    <script type="text/javascript"> 
+        var myDate = new Date(); 
+        var myDay = myDate.getDay(); 
+        
+        // Array of days. 
+        var weekday = ['Sunday', 'Monday', 'Tuesday', 
+            'Wednesday', 'Thursday', 'Friday', 'Saturday' 
+        ]; 
+        document.write( "Today is : " + weekday[myDay]); 
+        document.write("<br/>"); 
+        
+        // get hour value. 
+        var hours = myDate.getHours(); 
+        var ampm = hours >= 12 ? 'PM' : 'AM'; 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime = hours + " " + ampm + " : " + minutes +  
+            " : " + myDate.getMilliseconds(); 
+        document.write("\tCurrent time is : " + myTime); 
+</script>
+<input type="button" value="Print" 
+               onclick="window.print()" />
+<button type="button"
+onclick="document.getElementById('display').innerHTML=Date()">Date and Time</button>
+<p id="display"></p>
+</body>
+</html>
